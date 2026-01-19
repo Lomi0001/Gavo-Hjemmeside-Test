@@ -292,6 +292,7 @@ a:hover {
     border: 1px solid rgba(255, 255, 255, .10);
     border-radius: 22px;
     box-shadow: 0 24px 60px rgba(0, 0, 0, .26);
+    position: relative; /* VIGTIG – skaber stacking context */
 }
 
 .phone {
@@ -302,6 +303,8 @@ a:hover {
     border: 1px solid rgba(255, 255, 255, .14);
     box-shadow: 0 18px 44px rgba(0, 0, 0, .26);
     transform-origin: center bottom;
+    position: relative;
+    z-index: 2;
 }
 
 .phone img {
@@ -329,6 +332,8 @@ a:hover {
     transform: translateX(-50%);
     bottom: -34px;
     width: min(440px, 92%);
+    position: absolute;
+    z-index: 3;
 }
 
 .floatCard {
@@ -1015,8 +1020,6 @@ a:hover {
     .phone--b{
         order: 3;
     }
-}
-
     /* 6) Float-card: bliver en “info-linje” under phones */
     .hero__float {
         position: static;
@@ -1040,16 +1043,18 @@ a:hover {
 
 /* Mobil: gør det endnu mere clean (1 kolonne) */
 @media (max-width: 560px) {
-    .phoneRow{
+    .phoneRow {
         grid-template-columns: 1fr;
+        width: min(420px, 100%);
     }
 
-    .phone{
-        max-width: 320px;
+    .phone {
+        max-width: 300px;
     }
 
     .phone--c {
         grid-column: auto;
         max-width: 300px;
     }
+}
 }
