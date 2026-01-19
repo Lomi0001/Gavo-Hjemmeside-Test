@@ -1,0 +1,278 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Gavo – Saml dine gavekort ét sted</title>
+    <meta name="description"
+          content="Gavo samler dine gavekort ét sted – scan, gem og brug dem nemt. Officiel organisationshjemmeside."/>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+
+<body>
+<!-- Topbar -->
+<header class="topbar" id="top">
+    <div class="container topbar__inner">
+        <a class="brand" href="#top" aria-label="Gavo">
+            <img class="brand__logo" src="logo/Gavo.png" alt="Gavo logo"/>
+        </a>
+
+        <nav class="nav" aria-label="Navigation">
+            <a class="nav__link" href="#about">Om</a>
+            <a class="nav__link" href="#features">Funktioner</a>
+            <a class="nav__link" href="#faq">FAQ</a>
+            <a class="nav__link" href="#contact">Kontakt</a>
+        </nav>
+
+        <div class="topbar__actions">
+            <a class="chip" href="privacy.html">Privatliv</a>
+            <a class="chip chip--dark" href="terms.html">Vilkår</a>
+            <button class="hamburger" type="button" aria-expanded="false" aria-controls="mobileMenu">
+                Menu
+            </button>
+        </div>
+    </div>
+
+    <div class="container mobilemenu" id="mobileMenu" hidden>
+        <a class="mobilemenu__link" href="#about">Om</a>
+        <a class="mobilemenu__link" href="#features">Funktioner</a>
+        <a class="mobilemenu__link" href="#faq">FAQ</a>
+        <a class="mobilemenu__link" href="#contact">Kontakt</a>
+        <a class="mobilemenu__link" href="privacy.html">Privatliv</a>
+        <a class="mobilemenu__link" href="terms.html">Vilkår</a>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" aria-label="Hero">
+    <div class="hero__bg">
+        <div class="hero__decor hero__decor--ring"></div>
+        <div class="hero__decor hero__decor--dots"></div>
+        <div class="hero__decor hero__decor--grid"></div>
+    </div>
+    <div class="Overskrift">
+    <h4 class="hero__title">Saml dine gavekort ét sted</h4>
+    </div>
+    <div class="container hero__inner">
+
+
+        <div class="hero__right" aria-hidden="true">
+            <!-- 3 phones side-by-side (som reference) -->
+            <div class="phoneRow">
+                <figure class="phone phone--a">
+                    <img src="IMG_0805.jpg" alt=""/>
+                </figure>
+                <figure class="phone phone--b">
+                    <img src="IMG_0806.jpg" alt=""/>
+                </figure>
+                <figure class="phone phone--c">
+                    <img src="IMG_0809.jpg" alt=""/>
+                </figure>
+            </div>
+
+            <div class="hero__float">
+                <div class="floatCard">
+                    <div class="floatCard__title">På 30 sekunder</div>
+                    <div class="floatCard__text">
+                        Scan eller indtast gavekort – og hav dem gemt digitalt.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+    </div>
+</section>
+
+<!-- FEATURES (2 cards som reference-flow) -->
+<section class="section section--alt" id="features">
+    <div class="container">
+        <div class="section__header">
+            <h2 class="section__title">Om Gavo</h2>
+            <p class="section__lead">
+                En app der fungerer som en pung for dine gavekort, så du undgå at miste dine gavekort i mail, skuffer og
+                screenshots.
+            </p>
+        </div>
+        <div class="cards">
+            <article class="card">
+                <div class="card__media">
+                    <div class="shape shape--accent"></div>
+                    <figure class="phone phone--mini">
+                        <img src="IMG_0805.jpg" alt="Tilføj gavekort i appen"/>
+                    </figure>
+                </div>
+                <div class="card__content">
+                    <h3 class="card__title">Tilføj gavekort hurtigt</h3>
+                    <p class="card__text">
+                        Scan stregkoden på dit gavekort eller indtast koden manuelt. Målet er lav friktion – og fuld
+                        kontrol.
+                    </p>
+
+                </div>
+
+            </article>
+
+            <article class="card card--reverse">
+                <div class="card__media">
+                    <div class="shape shape--accent"></div>
+                    <figure class="phone phone--mini">
+                        <img src="IMG_0806.jpg" alt="Gavekortvisning i appen"/>
+                    </figure>
+                </div>
+                <div class="card__content">
+                    <h3 class="card__title">Få overblikket </h3>
+                    <p class="card__text">
+                       Du tilføjer udløbsdatoen og beløbet, så du altid har styr på hvornår det skal bruges.
+                    </p>
+
+                </div>
+            </article>
+            <article class="card">
+                <div class="card__media">
+                    <div class="shape shape--accent"></div>
+                    <figure class="phone phone--mini">
+                        <img src="IMG_0809.jpg" alt="Tilføj gavekort i appen"/>
+                    </figure>
+                </div>
+                <div class="card__content">
+                    <h3 class="card__title">Brug dem, når det gælder</h3>
+                    <p class="card__text">
+                        Hav dine gavekort klar i kassen. Tydelig visning og hurtig adgang.
+                    </p>
+
+                </div>
+
+            </article>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- FAQ -->
+<section class="section" id="faq">
+    <div class="container">
+        <div class="section__header">
+            <h2 class="section__title">FAQ</h2>
+            <p class="section__lead">De mest almindelige spørgsmål.</p>
+        </div>
+
+        <div class="faq">
+            <button class="faq__item" type="button" aria-expanded="false">
+                <span class="faq__q">Hvilke data behandler Gavo?</span>
+                <span class="faq__icon">+</span>
+            </button>
+            <div class="faq__a" hidden>
+                Gavo behandler kun de data, der er nødvendige for appens funktion. Det omfatter e-mail og adgangskode til login, fødselsdato samt gavekortoplysninger som stregkode, indtastningsdato og beløb. Oplysningerne anvendes udelukkende til at administrere din konto og give dig et klart overblik over dine gavekort.
+            </div>
+
+            <button class="faq__item" type="button" aria-expanded="false">
+                <span class="faq__q">Er appen i App Store / Google Play?</span>
+                <span class="faq__icon">+</span>
+            </button>
+            <div class="faq__a" hidden>
+                Ikke endnu. Når appen er offentlig, opdaterer vi linkene her. Indtil da kan du kontakte os for status.
+            </div>
+
+            <button class="faq__item" type="button" aria-expanded="false">
+                <span class="faq__q">Hvordan tilføjer jeg et gavekort?</span>
+                <span class="faq__icon">+</span>
+            </button>
+            <div class="faq__a" hidden>
+                Du kan tilføje via scanning eller manuel indtastning. Målet er, at det skal tage under ét minut.
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- DOWNLOAD -->
+<section class="download" id="download">
+    <div class="container download__inner">
+        <div class="download__left">
+            <h2 class="download__title">Hent appen</h2>
+            <p class="download__text">
+                Når appen er offentlig, linker vi direkte her. Indtil da fungerer siden som officiel reference
+                og kontaktpunkt ifm. registrering og onboarding.
+            </p>
+
+            <div class="download__badges">
+                <span class="storebadge storebadge--dark">App Store (kommer)</span>
+                <span class="storebadge storebadge--dark">Google Play (kommer)</span>
+            </div>
+
+            <div class="download__note">
+                Har du spørgsmål? Kontakt os – vi svarer typisk inden for 1-2 hverdage.
+            </div>
+        </div>
+
+        <div class="download__right" aria-hidden="true">
+            <div class="shape shape--big"></div>
+            <figure class="phone phone--single phone--shadow">
+                <img src="IMG_0817.jpg" alt=""/>
+            </figure>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section section--alt" id="contact">
+    <div class="container">
+        <div class="contactCard">
+            <div class="contactCard__head">
+                <h2 class="contactCard__title">Kontakt</h2>
+                <p class="contactCard__meta">
+                    Organisation: <strong>MineGavekort I/S</strong> · Danmark ·
+                    <a class="link" href="mailto:contact@gavo.dk">contact@gavo.dk</a>
+                </p>
+            </div>
+
+            <form class="form" id="contactForm" novalidate>
+                <div class="form__row">
+                    <div class="field">
+                        <label for="name">Navn</label>
+                        <input id="name" name="name" type="text" autocomplete="name" required/>
+                    </div>
+                    <div class="field">
+                        <label for="email">E-mail</label>
+                        <input id="email" name="email" type="email" autocomplete="email" required/>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="message">Besked</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+
+                <div class="form__actions">
+                    <button class="btn btn--primary" type="submit">Send</button>
+                    <span class="form__status" id="status" aria-live="polite"></span>
+                </div>
+
+
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container footer__inner">
+        <div>© <span id="year"></span> Gavo · MineGavekort I/S · Danmark</div>
+        <div class="footer__links">
+            <a href="privacy.html">Privatliv</a>
+            <span>·</span>
+            <a href="terms.html">Vilkår</a>
+        </div>
+    </div>
+</footer>
+
+<script src="main.js" defer></script>
+</body>
+</html>
