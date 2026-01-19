@@ -34,9 +34,10 @@ html, body {
 body {
     margin: 0;
     font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-    background: var(--bg);
+
     color: var(--ink);
 }
+
 
 a {
     color: inherit;
@@ -53,96 +54,141 @@ a:hover {
 }
 
 /* Topbar */
-.topbar {
+.topbar{
     position: sticky;
     top: 0;
-    z-index: 50;
-    background: rgba(255, 255, 255, .76);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(15, 18, 34, .08);
+    z-index: 1000;
+
+    background: rgba(255,255,255,.82);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(15,18,34,.08);
 }
 
-.topbar__inner {
+.topbar__inner{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 14px;
+  justify-content: space-between;
+
+
+
 
 }
 
-.brand__logo {
-    height: 100px;
+/* Logo: mindre, renere, mere premium */
+.brand__logo{
+    height: 70px;         /* VIGTIG: 100px var for meget */
     width: auto;
     display: block;
 }
 
-.nav {
+/* Nav */
+.nav{
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    align-items: center;
+}
+
+.nav__link{
+    padding: 10px 12px;
+    border-radius: 999px;
+    color: rgba(15,18,34,.72);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: -0.01em;
+
+    transition: background 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.nav__link:hover{
+    background: rgba(15,18,34,.05);
+    color: rgba(15,18,34,.92);
+}
+
+/* Actions */
+.topbar__actions{
     display: flex;
     gap: 10px;
     align-items: center;
 }
 
-.nav__link {
-    padding: 10px 12px;
+/* Chips / CTA */
+.chip{
+    padding: 10px 14px;
     border-radius: 999px;
-    color: rgba(15, 18, 34, .78);
-}
 
-.nav__link:hover {
-    background: rgba(15, 18, 34, .05);
-}
+    border: 1px solid rgba(15,18,34,.12);
+    background: rgba(255,255,255,.60);
 
-.topbar__actions {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
-
-.chip {
-    padding: 10px 12px;
-    border-radius: 999px;
-    border: 1px solid rgba(15, 18, 34, .12);
-    background: rgba(15, 18, 34, .04);
     font-weight: 800;
     font-size: 13px;
+    letter-spacing: -0.01em;
+
+    transition: transform 160ms cubic-bezier(.16,1,.3,1),
+    box-shadow 160ms cubic-bezier(.16,1,.3,1),
+    background 160ms ease;
 }
 
-.chip--dark {
-    background: var(--ink);
+.chip:hover{
+    transform: translateY(-1px);
+    box-shadow: 0 14px 34px rgba(15,18,34,.12);
+}
+
+.chip--dark{
+    background: rgba(15,18,34,.92);
     color: #fff;
-    border-color: var(--ink);
+    border-color: rgba(15,18,34,.12);
+    box-shadow: 0 18px 44px rgba(0,0,0,.14);
 }
 
-.hamburger {
+/* Hamburger */
+.hamburger{
     display: none;
-    padding: 10px 12px;
+    padding: 10px 14px;
     border-radius: 999px;
-    border: 1px solid rgba(15, 18, 34, .12);
-    background: #fff;
+
+    border: 1px solid rgba(15,18,34,.12);
+    background: rgba(255,255,255,.70);
+
     font-weight: 800;
     cursor: pointer;
+
+    transition: transform 160ms cubic-bezier(.16,1,.3,1),
+    box-shadow 160ms cubic-bezier(.16,1,.3,1);
 }
 
-/* Mobile menu */
-.mobilemenu {
-    padding: 10px 0 16px;
+.hamburger:hover{
+    transform: translateY(-1px);
+    box-shadow: 0 14px 34px rgba(15,18,34,.12);
 }
 
-.mobilemenu__link {
+/* Mobile menu (PRO) */
+.mobilemenu{
+    padding: 8px 0 18px;
+}
+
+.mobilemenu__link{
     display: block;
-    padding: 12px 12px;
+    padding: 12px 14px;
     margin-top: 10px;
-    border-radius: var(--r2);
-    border: 1px solid rgba(15, 18, 34, .12);
-    background: #fff;
+
+    border-radius: 14px;
+    border: 1px solid rgba(15,18,34,.10);
+    background: rgba(255,255,255,.90);
+
+    font-weight: 700;
+    color: rgba(15,18,34,.84);
+
+    box-shadow: 0 12px 34px rgba(15,18,34,.08);
 }
 
 /* HERO */
 .hero {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(180deg, #0b1020 0%, #0b1020 38%, #ffffff 38%, #ffffff 100%);
+    background: linear-gradient(27deg, #ffffff 5%, coral 100%, red 10%, #ffffff 100%);
+   padding-bottom:  20px;
 }
+
 
 .hero__bg {
     position: absolute;
@@ -773,15 +819,7 @@ a:hover {
 }
 
 
-:root {
-    --bg: #ffffff;
-    --text: #111111;
-    --muted: #666666;
-    --card: #f6f7f8;
-    --border: #e6e7ea;
-    --accent: #0b5fff;
-    --shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-}
+
 
 * {
     box-sizing: border-box;
@@ -861,15 +899,6 @@ a:hover {
     color: var(--muted);
 }
 
-:root {
-    --bg: #ffffff;
-    --text: #111111;
-    --muted: #666666;
-    --card: #f6f7f8;
-    --border: #e6e7ea;
-    --accent: #0b5fff;
-    --shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-}
 
 * {
     box-sizing: border-box;
@@ -967,8 +996,13 @@ a:hover {
     color: var(--muted);
 }/* Responsive */
 @media (max-width: 980px) {
-    .nav { display: none; }
-    .hamburger { display: inline-flex; }
+    .nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: inline-flex;
+    }
 
     /* 1) Hero: begræns højden og giv den en rolig rytme */
     .hero {
@@ -978,7 +1012,7 @@ a:hover {
 
     .hero__inner {
         grid-template-columns: 1fr;
-        padding-bottom: 0;              /* fjerner “unødvendig bund” */
+        padding-bottom: 0; /* fjerner “unødvendig bund” */
         gap: 16px;
     }
 
@@ -990,7 +1024,7 @@ a:hover {
     }
 
     /* 3) Gør phoneRow til en kompakt, centreret card-block */
-    .phoneRow{
+    .phoneRow {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 14px;
@@ -999,27 +1033,28 @@ a:hover {
     }
 
     /* roligt look på small screens */
-    .phone{
+    .phone {
         width: 100%;
         max-width: 260px;
         transform: none;
     }
 
     /* 1) ØVERST: brug "højre-billedet" som hero (phone--c) */
-    .phone--c{
+    .phone--c {
         order: 1;
-        grid-column: 1 / -1;   /* fylder hele bredden */
+        grid-column: 1 / -1; /* fylder hele bredden */
         max-width: 320px;
     }
 
     /* 2) UNDER: de to andre i to kolonner */
-    .phone--a{
+    .phone--a {
         order: 2;
     }
 
-    .phone--b{
+    .phone--b {
         order: 3;
     }
+
     /* 6) Float-card: bliver en “info-linje” under phones */
     .hero__float {
         position: static;
@@ -1038,23 +1073,25 @@ a:hover {
         grid-template-columns: 1fr;
     }
 
-    .card--reverse .card__media { order: 0; }
-
-
-/* Mobil: gør det endnu mere clean (1 kolonne) */
-@media (max-width: 560px) {
-    .phoneRow {
-        grid-template-columns: 1fr;
-        width: min(420px, 100%);
+    .card--reverse .card__media {
+        order: 0;
     }
 
-    .phone {
-        max-width: 300px;
-    }
 
-    .phone--c {
-        grid-column: auto;
-        max-width: 300px;
+    /* Mobil: gør det endnu mere clean (1 kolonne) */
+    @media (max-width: 560px) {
+        .phoneRow {
+            grid-template-columns: 1fr;
+            width: min(420px, 100%);
+        }
+
+        .phone {
+            max-width: 300px;
+        }
+
+        .phone--c {
+            grid-column: auto;
+            max-width: 300px;
+        }
     }
-}
 }
