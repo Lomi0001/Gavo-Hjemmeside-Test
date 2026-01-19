@@ -68,11 +68,11 @@ a:hover {
     display: flex;
   justify-content: space-between;
 
-
-
-
 }
 
+.hej{
+    color: red;
+}
 /* Logo: mindre, renere, mere premium */
 .brand__logo{
     height: 70px;         /* VIGTIG: 100px var for meget */
