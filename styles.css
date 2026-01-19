@@ -186,6 +186,8 @@ a:hover {
     overflow: hidden;
     background: linear-gradient(2700deg, #ffffff 1%, coral 100%, coral 10%, #ffffff 10%);
    padding-bottom:  231px;
+    padding-top: 10px ;
+
 }
 
 
@@ -234,8 +236,10 @@ a:hover {
     color: black;
     justify-content: center;
     margin: 0;
-    margin-top: 70px;
+    margin-top: 10px;
     margin-bottom: 20px;
+    padding-top: 20px ;
+    padding-bottom: 70px;
 }
 
 .hero__inner {
@@ -405,7 +409,8 @@ a:hover {
 
 /* Sections */
 .section {
-    padding: 84px 0;
+    padding-top: 200px ;
+    padding-bottom: 300px;
     background: linear-gradient(2700deg, #ffffff 5%, coral 100%, red 10%, #ffffff 100%);
 }
 
@@ -676,7 +681,8 @@ a:hover {
 /* Download */
 .download {
     background: linear-gradient(1deg, #ffffff 5%, coral 100%, red 10%, #ffffff 100%);
-    padding: 70px 0;
+    padding-top: 200px ;
+    padding-bottom: 200px;
 
 }
 
